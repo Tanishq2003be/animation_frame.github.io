@@ -6,6 +6,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        #download-btn {
+            position: absolute;
+            right: 40px;
+            padding: 10px 40px;
+            font-size: 16px;
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        #download-btn img {
+            position: absolute;
+            width: 20px;
+            /* Adjust size of the icon */
+            height: 20px;
+            left: 10px;
+            /* Adjust icon's position */
+            top: 50%;
+            /* Align icon vertically */
+            transform: translateY(-50%);
+        }
+    </style>
 </head>
 
 <body class="h-full w-full text-sm">
@@ -52,7 +77,11 @@
                     </p>
                     <pre><code id="valueFromStepperThree"></code></pre>
                 </div>
-
+                <div>
+                    <button id="download-btn">
+                    <img src="downloads.png" alt="Download" />Download
+                  </button>
+                </div>
             </aside>
         </div>
     </div>

@@ -484,8 +484,37 @@ class DawnToDuskRenderer extends Domel {
         this.gl.drawArrays(this.gl.TRIANGLES, 0, 9);
         requestAnimationFrame(this.animate.bind(this));
     }
+    saveCanvasAsImage() {
+        this.renderCanvas();
+        const image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        const link = document.createElement('a');
+        link.download = 'dawn_to_dusk.png';
+        link.href = image;
+        link.click();
+    }
+
+    renderCanvas() {
+        this.updateTime();
+        this.gl.clear(this.gl.COLOR_BUFFER_BIT);
+        this.gl.drawArrays(this.gl.TRIANGLES, 0, 9);
+    }
 
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const dawnToDuskRenderer = new DawnToDuskRenderer('webglCanvas');
+    const downloadButton = document.getElementById('download-btn');
+    downloadButton.textContent = 'Download';
+    downloadButton.addEventListener('click', dawnToDuskRenderer.saveCanvasAsImage.bind(dawnToDuskRenderer));
+    downloadButton.style.backgroundImage = 'url("downloads.png")';
+    downloadButton.style.backgroundRepeat = 'no-repeat';
+    downloadButton.style.backgroundPosition = 'left center';
+    downloadButton.style.backgroundSize = 'contain';
+    downloadButton.style.backgroundSize = '20px 20px';
+    downloadButton.style.paddingRight = '20px';
+    downloadButton.style.paddingLeft = '30px';
+    document.body.appendChild(downloadButton);
+});
+
 
 
 const start = new DawnToDuskRenderer('webglCanvas');
