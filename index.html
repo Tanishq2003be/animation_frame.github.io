@@ -58,61 +58,40 @@
 
         <p class="md:text-right text-xs md:text-sm" id="by"></p>
       </header>
-      <div class="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-8">
-        <main class="experiment flex-1 flex flex-col gap-2">
-          <div class="flex-1 relative">
-            <canvas
-              id="webglCanvas"
-              width="300"
-              height="150"
-              class="bg-slate-100 w-full h-full"
-            ></canvas>
-            <div class="absolute top-0 right-0 text-center">
-              <a
-                class="cursor-pointer block p-2 text-blue-300 hover:text-blue-500 active:text-blue-700"
-                href="javascript:saveCanvas()"
-                title="Download canvas as image."
-              >
-                <ion-icon name="save" class="text-3xl"></ion-icon><br />
-                <span class="text-sm">Download</span></a
-              >
-            </div>
-          </div>
-        </main>
-        <aside
-          class="flex-none flex flex-col gap-2 lg:max-w-sm min-h-52"
-          id="side-note"
-        >
-          <h2 class="text-lg font-bold"></h2>
-          <pre class="text-xs"><code id="valueFromStepperOne"></code></pre>
-
-          <div class="hidden">
-            <h2 class="text-lg font-bold">
-              Normalising speed in a
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"
-                ><code>rAF</code> callback</a
-              >
-            </h2>
-            <p>
-              The returned numberline will be of the same scale, irrespective of
-              refresh rate <code>requestAnimationFrame</code>
-            </p>
-
-            <pre><code id="valueFromStepperTwo"></code></pre>
-          </div>
-
-          <div class="hidden">
-            <h3>
-              Using
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
-                >Javascript <code>class</code></a
-              >
-            </h3>
-            <p>The value updated by <code>stepperThree</code> is:</p>
-            <pre><code id="valueFromStepperThree"></code></pre>
-          </div>
+      <div class="flex-1 flex flex-col lg:flex-row
+                  gap-4 lg:gap-8">
+            <main class="experiment flex-1 flex flex-col gap-2">
+                <div class="flex-1 relative">
+                    <canvas id="webglCanvas" width="300" height="150" class=" bg-slate-100 w-full h-full"></canvas>
+                    <div class="absolute top-0 right-0 text-center">
+                        <a class="cursor-pointer block p-2
+                        text-blue-300 hover:text-blue-500
+                        active:text-blue-700" href="javascript:saveCanvas()" title="Download canvas as image.">
+                            <ion-icon name="save" class="text-3xl"></ion-icon><br/>
+                            <span class="text-sm">Download</span></a>
+                    </div>
+                </div>
+            </main>
+            <aside class="flex-none flex flex-col gap-2
+                    lg:max-w-sm min-h-52" id="side-note">
+                <h2 class="text-lg font-bold">Simple
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"><code>requestAnimationFrame</code></a></h2>
+                <p>The value updated by <code>stepperOne</code> is:
+                </p>
+                <pre class="text-xs"><code id="valueFromStepperOne"></code></pre>
+                <div class="hidden">
+                    <h2 class="text-lg font-bold">Normalising speed in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"><code>rAF</code> callback</a></h2>
+                    <p>The returned numberline will be of the same scale, irrespective of refresh rate <code>requestAnimationFrame</code></p>
+                    <p>The value updated by <code>stepperTwo</code> is:
+                    </p>
+                    <pre><code id="valueFromStepperTwo"></code></pre>
+                </div>
+                <div class="hidden">
+                    <h3>Using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Javascript <code>class</code></a></h3>
+                    <p>The value updated by <code>stepperThree</code> is:
+                    </p>
+                    <pre><code id="valueFromStepperThree"></code></pre>
+                </div>
         </aside>
       </div>
     </div>
