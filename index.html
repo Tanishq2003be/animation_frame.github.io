@@ -1,97 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full w-full">
-  <head>
+
+<head>
     <title>0x08 : 2D Animations (Project)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style>
-      #download-btn {
-        position: absolute;
-        /* right: 40px; */
-        top: 40px;
-        left: 450px;
-        padding: 10px 40px;
-        font-size: 16px;
-        background-color: #4caf50;
-        border: none;
-        color: white;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-
-      #download-btn img {
-        position: absolute;
-        width: 20px;
-        /* Adjust size of the icon */
-        height: 20px;
-        left: 10px;
-        /* Adjust icon's position */
-        top: 50%;
-        /* Align icon vertically */
-        transform: translateY(-50%);
-      }
-
-      .btn1 {
-        margin-top: 30px;
-        padding-top: 30px;
-      }
+        #download-btn {
+            position: absolute;
+            /* right: 40px; */
+            top: 40px;
+            left: 450px;
+            padding: 10px 40px;
+            font-size: 16px;
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        #download-btn img {
+            position: absolute;
+            width: 20px;
+            /* Adjust size of the icon */
+            height: 20px;
+            left: 10px;
+            /* Adjust icon's position */
+            top: 50%;
+            /* Align icon vertically */
+            transform: translateY(-50%);
+        }
+        
+        .btn1 {
+            margin-top: 30px;
+            padding-top: 30px;
+        }
     </style>
-  </head>
+</head>
 
-  <body class="h-full w-full text-sm">
+<body class="h-full w-full text-sm">
     <div class="container flex flex-col nowrap gap-2 p-8 h-full m-auto">
-      <header class="flex flex-col md:flex-row justify-between md:items-end">
-        <h1 class="flex-none text-2xl font-bold">
-          0x08 : 2D Animations (Project)
-        </h1>
+        <header class="flex flex-col md:flex-row justify-between md:items-end">
+            <h1 class="flex-none text-2xl font-bold">
+                0x08 : 2D Animations (Project)
+            </h1>
 
-        <button id="download-btn">
+            <button id="download-btn">
           <img src="downloads.png" alt="Download" />Download
         </button>
 
-        <p class="md:text-right text-xs md:text-sm" id="by"></p>
-      </header>
-      <div class="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-8">
-        <main class="experiment flex-1 flex flex-col gap-2">
-          <div class="flex-1 relative">
-            <canvas
-              id="webglCanvas"
-              width="300"
-              height="150"
-              class="bg-slate-100 w-full h-full"
-            ></canvas>
-            <div class="absolute top-0 right-0 text-center">
-              <a
-                class="cursor-pointer block p-2 text-blue-300 hover:text-blue-500 active:text-blue-700"
-                href="javascript:saveCanvas()"
-                title="Download canvas as image."
-              >
-                <ion-icon name="save" class="text-3xl"></ion-icon><br />
-                <span class="text-sm">Download</span></a
-              >
-            </div>
-          </div>
-        </main>
-        <aside
-          class="flex-none flex flex-col gap-2 lg:max-w-sm min-h-52"
-          id="side-note"
-        >
-          <h2 class="text-lg font-bold"></h2>
-          <pre class="text-xs"><code id="valueFromStepperOne"></code></pre>
+            <p class="md:text-right text-xs md:text-sm" id="by"></p>
+        </header>
+        <div class="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-8">
+            <main class="experiment flex-1 flex flex-col gap-2">
+                <div class="flex-1 relative">
+                    <canvas id="webglCanvas" width="300" height="150" class="bg-slate-100 w-full h-full"></canvas>
+                    <div class="absolute top-0 right-0 text-center">
+                        <a class="cursor-pointer block p-2 text-blue-300 hover:text-blue-500 active:text-blue-700" href="javascript:saveCanvas()" title="Download canvas as image.">
+                            <ion-icon name="save" class="text-3xl"></ion-icon><br />
+                            <span class="text-sm">Download</span></a>
+                    </div>
+                </div>
+            </main>
+            <aside class="flex-none flex flex-col gap-2 lg:max-w-sm min-h-52" id="side-note">
+                <h2 class="text-lg font-bold"></h2>
+                <pre class="text-xs"><code id="valueFromStepperOne"></code></pre>
 
-          <div class="hidden">
-            <h2 class="text-lg font-bold">
-              Normalising speed in a
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"
-                ><code>rAF</code> callback</a
+                <div class="hidden">
+                    <h2 class="text-lg font-bold">
+                        Normalising speed in a
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"><code>rAF</code> callback</a
               >
             </h2>
             <p>
