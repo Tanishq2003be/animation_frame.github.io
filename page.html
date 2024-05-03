@@ -1,85 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        
-        p {
-            text-align: center;
-            color: #666;
-        }
-        
-        .btn {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-top: 40px;
-            color: #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      p {
+        text-align: center;
+        color: #666;
+      }
+
+      .btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-top: 40px;
+        color: #333;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Welcome to the Documentation</h1>
+      <h1>Welcome to the Documentation</h1>
 
+      <h2 class="section-title">Resources</h2>
 
-        <h2 class="section-title">Resources</h2>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"
+          >Documentation of Web gl</a
+        >
+      </li>
 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">Documentation of Web gl</a></li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=bP7_FeP9kU4&list=PL2935W76vRNHFpPUuqmLoGCzwx_8eq5yK"
+          >Youtube Video</a
+        >
+      </li>
 
+      <h2 class="section-title">Ideation</h2>
+      <p>Information about ideation...</p>
 
-        <li> <a href="https://www.youtube.com/watch?v=bP7_FeP9kU4&list=PL2935W76vRNHFpPUuqmLoGCzwx_8eq5yK">Youtube Video</a></li>
+      <h2 class="section-title">Challenges</h2>
+      <h3>1. Flapping Bird Wings:</h3>
 
-        <h2 class="section-title">Ideation</h2>
-        <p>Information about ideation...</p>
+      Implementing realistic bird animations, including the flapping of wings,
+      posed a significant technical challenge. This involved creating a smooth
+      and natural-looking animation sequence that synced with the bird's flight
+      trajectory. Key aspects of this challenge included designing a dynamic
+      animation system that accurately simulates the movement of bird wings
+      based on factors such as wind speed, altitude, and wing morphology, as
+      well as developing algorithms for interpolating between keyframes to
+      achieve smooth and fluid motion, while also ensuring that the animation
+      remains responsive to user input or environmental changes. Optimizing the
+      animation code to maintain consistent frame rates across different devices
+      and screen resolutions was also crucial.
 
-        <h2 class="section-title">Challenges</h2>
-        <p>Information about challenges...</p>
+      <h3>2. Setting Coordinates for Different Objects:</h3>
+      Positioning and aligning various objects within the WebGL scene also
+      presented its own set of challenges. This aspect required careful
+      consideration of spatial coordinates and transformations, including
+      understanding and working with different coordinate systems, such as world
+      space, local space, and screen space, to accurately position objects
+      relative to each other and the camera. Managing the hierarchical
+      relationship between different objects in the scene, such as mountains,
+      birds, and the sun, was essential to ensure proper placement and
+      alignment. Additionally, implementing dynamic object placement and
+      movement, such as randomizing the positions of trees or birds within
+      predefined regions of the scene, while still maintaining coherence and
+      avoiding collisions, added complexity. Moreover, incorporating collision
+      detection algorithms to prevent objects from intersecting with each other
+      or the terrain, especially in dynamic or interactive scenes where objects
+      may move or change position over time, was crucial for the overall realism
+      and user experience of the project.
 
-        <h2 class="section-title">Overcoming</h2>
-        <p>Information about overcoming challenges...</p>
+      <h2 class="section-title">Overcoming</h2>
 
-        <a class="btn" href="https://tanishq2003be.github.io/animation-frame.github.io/">Go to the second page</a>
+      <h3>1. Precise Object Placement</h3>
+      Manage coordinate systems effectively to accurately position objects
+      within the scene. Create dynamic placement algorithms considering
+      environmental constraints and user interactions. Iterate through testing
+      and refinement to fine-tune placement algorithms.
+
+      <h3>2. Hit and Trial</h3>
+      Experiment with different animation parameters, interpolation techniques,
+      and object placement algorithms through iterative testing. Solicit user
+      feedback and make adjustments accordingly. Utilize a trial-and-error
+      approach to refine the project's visual fidelity and performance.
+
+      <a
+        class="btn"
+        href="https://tanishq2003be.github.io/animation-frame.github.io/"
+        >Go to the second page</a
+      >
     </div>
-</body>
-
+  </body>
 </html>
