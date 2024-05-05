@@ -1,4 +1,4 @@
-# 0x08 : 2D Animations (Project)
+# 0x08 : 2D Animations (DAWN TO DUSK)
 
 ## Dawn To Dusk
 
