@@ -3,8 +3,8 @@ const getDom = document.querySelector.bind(document)
 
 function canvasSetup(sel) {
     const { canvas, bb: { width: W, height: H } } = getCanvas(sel)
-    canvas.width = 10
-    canvas.height = 1
+    canvas.width = 300
+    canvas.height = 150
 
     setTimeout(() => {
         canvas.width = parseFloat(W)
@@ -12,7 +12,7 @@ function canvasSetup(sel) {
     }, 0)
 }
 
-function getCanvas(sel, context = 'webglCanvas') {
+function getCanvas(sel, context = 'webgl') {
     const canvas = getDom(sel)
     return {
         canvas,

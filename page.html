@@ -7,37 +7,64 @@
     <title>Documentation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to bottom, #f0f0f0, #d8e4ff);
             margin: 0;
             padding: 0;
-            background-color: #d3f7bf;
         }
         
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #cfe2f3;
+            background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            color: black;
         }
         
-        h1 {
+        h1,
+        h2,
+        h3 {
             text-align: center;
             color: #333;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .section-title {
-            text-align: center;
             margin-top: 40px;
             color: #333;
+            border-bottom: 2px solid #ff6363;
+            /* Change color to vibrant red */
+            color: magenta;
+            padding-bottom: 10px;
         }
         
         p {
-            text-align: center;
+            text-align: justify;
             color: #666;
+            margin: 10px 0;
+        }
+        
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: blue;
+            /* Change color to vibrant green */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #388e3c;
+            /* Darker shade of green on hover */
         }
         
         .btn {
@@ -46,7 +73,8 @@
             margin: 20px auto;
             padding: 10px;
             text-align: center;
-            background-color: #007bff;
+            background-color: blue;
+            /* Change color to vibrant orange */
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -54,8 +82,43 @@
         }
         
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #ff6f00;
+            /* Darker shade of orange on hover */
             transform: scale(1.1);
+        }
+        
+        .assets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .asset {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffc107;
+            /* Change color to vibrant yellow */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .asset img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .asset h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .hi {
+            margin-top: 0;
         }
     </style>
 </head>
@@ -67,42 +130,188 @@
         <h2 class="section-title">Resources</h2>
         <ul>
             <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">Documentation of Web gl</a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/watch?v=bP7_FeP9kU4&list=PL2935W76vRNHFpPUuqmLoGCzwx_8eq5yK">Youtube Video</a>
-            </li>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">Documentation of Web gl</a
+          >
+          : The WebGL documentation was like our project's roadmap, showing us how to create cool graphics on the web. It explained things clearly and showed us examples that helped us understand better. Because of it, we could make our visuals really awesome and interactive.
+           Basically, it was our go-to guide for making our web project look amazing!
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=bP7_FeP9kU4&list=PL2935W76vRNHFpPUuqmLoGCzwx_8eq5yK"
+            >Youtube Video</a
+          >
+         : This YouTube Playlist provide us another huge help for our project. 
+          They provided step-by-step tutorials and demonstrations that made learning easier.
+           Watching these videos gave us practical insights and solutions to various challenges we encountered. 
+        </li>
+      </ul>
+
+      <h2 class="section-title">Source Of Inspiration</h2>
+      <ul style="list-style-type: disc">
+        <li>
+          The idea for creating a landscape is inspired by nature and the beauty
+          of natural landscapes.
+        </li>
+
+        <li>
+          One evening, as the sun begins to set and birds are flying in the sky,
+          we notice how the colors of the sky change, creating a stunning
+          display of light and shadow.
+        </li>
+        <li>
+          This experience of witnessing the beauty of nature throughout the day
+          inspires us to create an animation that captures these moments,
+          showcasing the natural beauty of the world around us.
+        </li>
+        <li>
+          Nature is always changing, and each moment is unique and beautiful. We
+          want to capture these fleeting moments and share them with others.
+        </li>
+      </ul>
+
+      <h2 class="section-title">Challenges</h2>
+      <h3>Flapping Bird Wings:</h3>
+
+      <ul style="list-style-type: disc">
+        <li>
+          Implementing realistic bird animations, including the flapping of
+          wings, posed a significant technical challenge.
+        </li>
+        <li>
+          This involved creating a smooth and natural-looking animation sequence
+          that synced with the bird's flight trajectory.
+        </li>
+        <ul style="list-style-type: disc">
+          <h4>Key aspects of this challenge included:-</h4>
+          <li>
+            Designing a dynamic animation system that accurately simulates the
+            movement of bird wings based on factors such as wind speed,
+            altitude, and wing morphology.
+          </li>
+          <li>
+            Developing algorithms for interpolating between keyframes to achieve
+            smooth and fluid motion.
+          </li>
+          <li>
+            Ensuring that the animation remains responsive to user input or
+            environmental changes.
+          </li>
         </ul>
 
-        <h2 class="section-title">Ideation</h2>
-        The idea for creating a landscape is inspired by nature and the beauty of natural landscapes. One evening, as the sun begins to set and birds are flying in the sky, we notice how the colors of the sky change, creating a stunning display of light and shadow.
-        This experience of witnessing the beauty of nature throughout the day inspires us to create an animation that captures these moments, showcasing the natural beauty of the world around us. We want to show the natural beauty through our animation.
-        Nature is always changing, and each moment is unique and beautiful. We want to capture these fleeting moments and share them with others.
+        <li>
+          Optimizing the animation code to maintain consistent frame rates
+          across different devices and screen resolutions was also crucial.
+        </li>
+      </ul>
 
-        <h2 class="section-title">Challenges</h2>
-        <h3>1. Flapping Bird Wings:</h3>
-        Implementing realistic bird animations, including the flapping of wings, posed a significant technical challenge. This involved creating a smooth and natural-looking animation sequence that synced with the bird's flight trajectory. Key aspects of this
-        challenge included designing a dynamic animation system that accurately simulates the movement of bird wings based on factors such as wind speed, altitude, and wing morphology, as well as developing algorithms for interpolating between keyframes
-        to achieve smooth and fluid motion, while also ensuring that the animation remains responsive to user input or environmental changes. Optimizing the animation code to maintain consistent frame rates across different devices and screen resolutions
-        was also crucial.
+      <h3>Setting Coordinates for Different Objects:</h3>
+      <p>
+       <ul style="list-style-type: disc">
+    <li>
+        Positioning and aligning various objects within the WebGL scene presented its own set of challenges.
+    </li>
+    <li>
+        This aspect required careful consideration of spatial coordinates and transformations, including understanding and working with different coordinate systems, such as world space, local space, and screen space.
+    </li>
+    <li>
+        The goal was to accurately position objects relative to each other.
+    </li>
+    <li>
+        Managing the hierarchical relationship between different objects in the scene was essential to ensure proper placement and alignment. This included mountains, birds, and the sun.
+    </li>
+    <li>
+        Additionally, implementing dynamic object placement and movement added complexity. For example, randomizing the positions of sun or birds within predefined regions of the scene while maintaining coherence and avoiding collisions.
+    </li>
+   
+</ul>
+<h3>Sky Color Transitions</h3>
+      <p>
+       <ul style="list-style-type: disc">
+    <li>
+      Simulating the changing colors of the sky during sunset posed one of our biggest challenges in the project
+    </li>
+    <li>
+        This aspect required careful consideration of spatial coordinates and transformations, including understanding and working with different coordinate systems, such as world space, local space, and screen space.
+    </li>
+    <li>
+      We had to figure out how to blend colors smoothly, going from warm oranges to deep purples.
+    </li>
+   
+</ul>
 
-        <h3>2. Setting Coordinates for Different Objects:</h3>
-        Positioning and aligning various objects within the WebGL scene also presented its own set of challenges. This aspect required careful consideration of spatial coordinates and transformations, including understanding and working with different coordinate
-        systems, such as world space, local space, and screen space, to accurately position objects relative to each other and the camera. Managing the hierarchical relationship between different objects in the scene, such as mountains, birds, and the
-        sun, was essential to ensure proper placement and alignment. Additionally, implementing dynamic object placement and movement, such as randomizing the positions of trees or birds within predefined regions of the scene, while still maintaining
-        coherence and avoiding collisions, added complexity. Moreover, incorporating collision detection algorithms to prevent objects from intersecting with each other or the terrain, especially in dynamic or interactive scenes where objects may move
-        or change position over time, was crucial for the overall realism and user experience of the project.
+      </p>
 
-        <h2 class="section-title">Overcoming</h2>
-        <h3>1. Precise Object Placement</h3>
-        Manage coordinate systems effectively to accurately position objects within the scene. Create dynamic placement algorithms considering environmental constraints and user interactions. Iterate through testing and refinement to fine-tune placement algorithms.
+      <h2 class="section-title">Overcoming</h2>
+      <h3>Precise Object Placement</h3>
+      <ul style="list-style-type: disc">
+    <li>
+        Manage coordinate systems effectively to accurately position objects within the scene.
+    </li>
+    <li>
+        Create dynamic placement algorithms considering environmental constraints and user interactions.
+    </li>
+    <li>
+        Iterate through testing and refinement at each step.
+    </li>
+</ul>
+
+      <h3>Hit and Trial</h3>
+      <ul style="list-style-type: disc">
+    <li>
+        Experiment with different animation parameters randomly.
+    </li>
+    <li>
+         Made adjustments accordingly to get the best scene possible.
+    </li>
+    <li>
+        Utilize a trial-and-error approach to refine the project's visual fidelity and performance.
+    </li>
+</ul>
+<h3>Fine tunning</h3>
+      <ul style="list-style-type: disc">
+    <li>
+      We had to experiment with different color gradients and lighting effects to capture the natural transitions accurately. 
+    </li>
+    <li>
+      Fine-tuning the balance between realism and performance was crucial to achieve a visually stunning sunset scene
+    </li>
+   
+</ul>
 
 
-        <h3>2. Hit and Trial</h3>
-        Experiment with different animation parameters, interpolation techniques, and object placement algorithms through iterative testing. Solicit user feedback and make adjustments accordingly. Utilize a trial-and-error approach to refine the project's visual
-        fidelity and performance.
+      <h2 class="section-title">Assets</h2>
+      <div class="assets-container">
+        <div class="asset">
+          <img src="mountains.jpg" alt="Image 1" />
+          <h2>Mountains</h2>
+          <p>
+            Mountains are like giant piles of rocks that reach really high into
+            the sky. They're big, tall landforms with steep sides, often covered
+            in snow at the top.
+          </p>
+        </div>
+        <div class="asset">
+          <img src="sun.jpg" alt="Image 2" />
+          <h2>Sun</h2>
+          <p>
+            The sun is a bright, glowing ball of gas that provides light and
+            warmth to our planet. It's the center of our solar system and the
+            source of energy for all life on Earth.
+          </p>
+        </div>
+        <div class="asset">
+          <img src="birds.jpg" alt="Image 2" />
+          <h2 class="hi">Flying Birds</h2>
+          <p>
+            Birds fly high in the sky, flapping their wings to glide through the
+            air with ease, bringing beauty to the heavens with their graceful
+            dance.
+          </p>
+        </div>
+        <!-- Add more images and descriptions as needed -->
+      </div>
 
-        <a class="btn" href="https://tanishq2003be.github.io/animation-frame.github.io/">Go to the Demo</a>
+      <a class="btn" href="index.html">Go to the Demo</a>
     </div>
 </body>
 
