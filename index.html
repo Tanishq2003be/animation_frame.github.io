@@ -2,16 +2,17 @@
 <html lang="en" class="h-full w-full">
 
 <head>
-    <title>0x08 : 2D Animations (DAWN TO DUSK)</title>
+    <title>0x08 : 2D Animations (Project)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style>
         #download-btn {
             position: absolute;
-            /* right: 40px; */
             top: 40px;
-            left: 450px;
+            left: 50%;
+            /* Center the button horizontally */
+            transform: translateX(-50%);
             padding: 10px 40px;
             font-size: 16px;
             background-color: #4caf50;
@@ -19,6 +20,22 @@
             color: white;
             border-radius: 10px;
             cursor: pointer;
+        }
+        /* Responsive adjustments */
+        
+        @media screen and (max-width: 1000px) {
+            #download-btn {
+                top: -0.3px;
+                /* Adjust top position as needed */
+            }
+        }
+        
+        @media screen and (max-width: 404px) {
+            #download-btn {
+                padding: 8px 30px;
+                font-size: 14px;
+                top: 10px;
+            }
         }
         
         #download-btn img {
@@ -28,7 +45,7 @@
             height: 20px;
             left: 10px;
             /* Adjust icon's position */
-            top: 50%;
+            top: 100%;
             /* Align icon vertically */
             transform: translateY(-50%);
         }
@@ -44,7 +61,7 @@
     <div class="container flex flex-col nowrap gap-2 p-8 h-full m-auto">
         <header class="flex flex-col md:flex-row justify-between md:items-end">
             <h1 class="flex-none text-2xl font-bold">
-                0x08 : 2D Animations (DAWN TO DUSK)
+                0x08 : 2D Animations (Project)
             </h1>
 
             <button id="download-btn">
